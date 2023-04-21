@@ -1,0 +1,15 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<center>
+    <h1>Your vacation slots</h1>
+    <hr />
+    <p>{{eligibleslotinfo}}</p>
+    {% for slot in slots %}
+        <li>{{slot.slot}}</li>
+    {% endfor %}<br />
+    <a href="{% url 'home' %}" class="btn btn-success">Confirm</a>
+</center>
+{% endblock content %}
